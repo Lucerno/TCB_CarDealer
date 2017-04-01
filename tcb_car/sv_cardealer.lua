@@ -564,3 +564,19 @@ function TCBDealer.dealerRange(ply, dealer)
 	return ply:GetPos():Distance(dealer.pos) <= 200
 
 end
+
+
+
+
+
+------------------------- Edit by Lucernopower -------------------------
+
+-- Restore the character when the map is restored
+-- Restore le personage quand la map est restaurer
+function mapcleanupcardealerrestore()
+	TCBDealer.spawnDealer()
+end
+
+hook.Add( "PostCleanupMap", "restorepng", mapcleanupcardealerrestore )
+
+------------------------------------------------------------------------
